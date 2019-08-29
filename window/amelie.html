@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>It's Amelie Au</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../styles/window_1.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/history.js/1.8/native.history.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.1.0.min.js"
+      integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="title">The impression of Amelie</div>
+    <div class="profile">
+      <div class="James Bull">
+        <img src="../images/team-09.png" />
+        <div class="info"></div>
+        <p class="person">
+          Amelie Au
+
+          <br />
+          <span>
+            Senior Designer
+          </span>
+        </p>
+      </div>
+
+      <div class="animated-intro">
+        <div class="intro"></div>
+      </div>
+    </div>
+    <div class="logo">
+      <a href="../index.html"
+        ><img class="white" src="../images/logo-02.png"
+      /></a>
+      <a href="../index.html"
+        ><img class="black" src="../images/logo-01.png"
+      /></a>
+    </div>
+
+    <div class="header">
+      <div class="button"></div>
+      <div class="button2"></div>
+      <a href="../about.html">About</a>
+    </div>
+  </body>
+
+  <script>
+    $(document).ready(function() {
+      console.log($(".intro"));
+      new Typed(".intro", {
+        strings: [
+          "OMG, that's cute, <br/>that's super cute. <br/>(Meanwhile)advise people in earnest<br/>(Meanwhile) part-time badass."
+        ],
+        typeSpeed: 80,
+        cursorChar: "|"
+      });
+    });
+    $(".button").click(function(event) {
+      var buttonElement = $(event.target);
+      var bodyElement = $("body");
+      if (buttonElement.hasClass("on")) {
+        buttonElement.removeClass("on");
+        bodyElement.removeClass("switch-color");
+        $(".black").hide();
+      } else {
+        buttonElement.addClass("on");
+        bodyElement.addClass("switch-color");
+        $(".black").show();
+      }
+    });
+
+    $(".button2").click(function(event) {
+      var buttonElement = $(event.target);
+      var bodyElement = $("body");
+      if (buttonElement.hasClass("on")) {
+        buttonElement.removeClass("on");
+        bodyElement.removeClass("animated-color");
+      } else {
+        buttonElement.addClass("on");
+        bodyElement.addClass("animated-color");
+      }
+    });
+  </script>
+</html>
